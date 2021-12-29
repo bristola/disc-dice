@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$primary-color: #5a89e0;
+$primary-dark: #3c5c99;
+$secondary-color: #b8b8b8;
+$secondary-dark: #8a8a8a;
+
+button {
+  padding: 10px !important;
+  border-radius: 10px !important;
+
+  &.primary {
+    background-color: $primary-color;
+    border: $primary-color 1px solid;
+    color: white;
+
+    &:hover {
+      background-color: $primary-dark;
+      transition: 100ms;
+    }
+  }
+}
+
+// Text alignment helpers
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: center;
+}
+
+// Spacing helpers
+$prefixes: (
+  p  : padding,
+  pt : padding-top,
+  pr : padding-right,
+  pb : padding-bottom,
+  pl : padding-left,
+  m  : margin,
+  mt : margin-top,
+  mr : margin-right,
+  mb : margin-bottom,
+  ml : margin-left
+);
+
+@each $prefix-key, $prefix-value in $prefixes {
+  @for $i from 0 through 60 {
+    @if $i % 3 {
+      .#{$prefix-key}-#{$i} {
+        #{$prefix-value}: #{$i}px !important;
+      }
+    }
+  }
+}
