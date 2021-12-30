@@ -31,6 +31,28 @@ button {
       transition: 100ms;
     }
   }
+
+  &.outlined {
+    background-color: white;
+    border: $primary-color 1px solid;
+    color: $primary-color;
+
+    &:hover {
+      background-color: #ececec;
+      transition: 100ms;
+    }
+  }
+}
+
+input[type=text], input[type=number] {
+  border: 1px solid #787878 !important;
+  padding: 5px !important;
+  border-radius: 5px !important;
+}
+
+.card {
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 // Text alignment helpers
@@ -44,6 +66,19 @@ button {
 
 .text-right {
   text-align: center;
+}
+
+// Size helpers
+.full-width {
+  width: 100%;
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-200 {
+  width: 200px;
 }
 
 // Spacing helpers
